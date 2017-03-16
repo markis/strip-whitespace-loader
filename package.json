@@ -1,0 +1,44 @@
+{
+  "name": "strip-whitespace-loader",
+  "version": "0.0.1",
+  "description": "Strip whitespace from strings in javascript assets",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "in-publish && npm test && npm run build || not-in-publish ",
+    "lint": "tslint -c tslint.json ./src/**/*.ts",
+    "test": "npm run lint && npm run build && npm run test:unit",
+    "test:unit": "rollup -c -o test.js -i test/index.ts && node test.js",
+    "build": "npm run build:index && npm run build:declaration",
+    "build:declaration": "tsc -d && mv tmp/src/index.d.ts ./index.d.ts && rm -rf ./tmp",
+    "build:index": "rollup -c -o index.js -i src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/markis/strip-whitespace-plugin.git"
+  },
+  "keywords": [
+    "whitespace",
+    "strings",
+    "strip-whitespace",
+    "minification",
+    "webpack",
+    "loader"
+  ],
+  "author": "Markis Taylor <m@rkis.cc>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markis/strip-whitespace-loader/issues"
+  },
+  "homepage": "https://github.com/markis/strip-whitespace-loader#readme",
+  "devDependencies": {
+    "@types/node": "^7.0.8",
+    "in-publish": "^2.0.0",
+    "rollup": "^0.41.5",
+    "rollup-plugin-typescript": "^0.8.1",
+    "tslint": "^4.5.1",
+    "typescript": "^2.2.1"
+  },
+  "dependencies": {
+    "strip-whitespace": "0.0.10"
+  }
+}
