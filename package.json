@@ -3,6 +3,9 @@
   "version": "0.0.3",
   "description": "Strip whitespace from strings in javascript assets",
   "main": "index.js",
+  "engines": {
+    "node": ">= 0.12"
+  },
   "scripts": {
     "prepublish": "in-publish && npm test && npm run build || not-in-publish ",
     "lint": "if-ver -ge 4 && tslint -c tslint.json ./src/**/*.ts || return 0",
