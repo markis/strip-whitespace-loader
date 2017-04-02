@@ -51,6 +51,6 @@
     "typescript": "^2.2.1"
   },
   "dependencies": {
-    "strip-whitespace": "0.0.10"
+    "strip-whitespace": "1.0.0"
   }
 }
