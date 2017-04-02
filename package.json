@@ -5,17 +5,25 @@
   "main": "index.js",
   "scripts": {
     "prepublish": "in-publish && npm test && npm run build || not-in-publish ",
-    "lint": "tslint -c tslint.json ./src/**/*.ts",
+    "lint": "if-ver -ge 4 && tslint -c tslint.json ./src/**/*.ts || return 0",
     "test": "npm run lint && npm run build && npm run test:unit",
     "test:unit": "rollup -c -o test.js -i test/index.ts && node test.js",
+    "test:coverage": "if-ver -ge 4 && istanbul cover test.js || return 0",
     "build": "npm run build:index && npm run build:declaration",
-    "build:declaration": "tsc -d && mv tmp/src/index.d.ts ./index.d.ts && rm -rf ./tmp",
-    "build:index": "rollup -c -o index.js -i src/index.ts"
+    "build:declaration": "if-ver -ge 4.2 && tsc -d && mv tmp/src/index.d.ts ./index.d.ts && rm -rf ./tmp || return 0",
+    "build:index": "if-ver -ge 0.12 && rollup -c -o index.js -i src/index.ts || return 0"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/markis/strip-whitespace-loader.git"
   },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "LICENSE.md",
+    "package.json",
+    "README.md"
+  ],
   "keywords": [
     "whitespace",
     "strings",
@@ -32,6 +40,7 @@
   "homepage": "https://github.com/markis/strip-whitespace-loader#readme",
   "devDependencies": {
     "@types/node": "^7.0.8",
+    "if-ver": "^1.0.6",
     "in-publish": "^2.0.0",
     "rollup": "^0.41.5",
     "rollup-plugin-typescript": "^0.8.1",
