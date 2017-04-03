@@ -29,7 +29,7 @@ script:
 after_success:
 - "(if-ver -gt 6 && istanbul cover test.js --report lcovonly) || return 0"
 - "(if-ver -gt 6 && remap-istanbul --type lcovonly -i coverage/coverage.json -o coverage/remapped-lcov.info) || return 0"
-- "(if-ver -gt 6 && cat coverage/remapped-lcov.info | codacy-coverage) || return 0"
+- "(if-ver -gt 6 && cat coverage/remapped-lcov.info | codacy-coverage --language typescript) || return 0"
 - "(if-ver -gt 6 && cat coverage/remapped-lcov.info | coveralls) || return 0"
 
 deploy:
