@@ -42,13 +42,13 @@
   },
   "homepage": "https://github.com/markis/strip-whitespace-loader#readme",
   "devDependencies": {
-    "@types/node": "^7.0.8",
+    "@types/node": "^7.0.18",
     "if-ver": "^1.0.6",
     "in-publish": "^2.0.0",
-    "rollup": "^0.41.5",
+    "rollup": "^0.41.6",
     "rollup-plugin-typescript": "^0.8.1",
-    "tslint": "^4.5.1",
-    "typescript": "^2.2.1"
+    "tslint": "^5.2.0",
+    "typescript": "^2.3.2"
   },
   "dependencies": {
     "strip-whitespace": "^1.0.6",
