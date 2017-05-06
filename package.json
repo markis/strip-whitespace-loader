@@ -1,6 +1,6 @@
 {
   "name": "strip-whitespace-loader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Strip whitespace from strings in javascript assets",
   "main": "index.js",
   "engines": {
