@@ -42,7 +42,7 @@
   },
   "homepage": "https://github.com/markis/strip-whitespace-loader#readme",
   "devDependencies": {
-    "@types/node": "^7.0.18",
+    "@types/node": "^8.0.0",
     "if-ver": "^1.0.6",
     "in-publish": "^2.0.0",
     "rollup": "^0.42.0",
