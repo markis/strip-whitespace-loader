@@ -48,3 +48,8 @@ function() {
   }
 }
 ```
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/markis/strip-whitespace-loader/badge.svg?style=beer-square)](https://beerpay.io/markis/strip-whitespace-loader)  [![Beerpay](https://beerpay.io/markis/strip-whitespace-loader/make-wish.svg?style=flat-square)](https://beerpay.io/markis/strip-whitespace-loader?focus=wish)
