@@ -1,12 +1,13 @@
 var typescript = require('rollup-plugin-typescript');
 
 module.exports = {
-  entry: './src/index.ts',
-  dest: 'index.js',
-  format: 'cjs',
-  moduleId: 'strip-whitespace-loader',
-  moduleName: 'strip-whitespace-loader',
-  sourceMap: true,
+  input: './src/index.ts',
+  output: {
+    file: 'index.js',
+    format: 'cjs',
+    name: 'strip-whitespace-loader',
+    sourcemap: true,
+  },
   external: [
     'assert',
     'fs',
