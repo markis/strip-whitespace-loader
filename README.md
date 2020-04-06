@@ -5,7 +5,7 @@
 [![AppVeyor](https://img.shields.io/appveyor/ci/markis/strip-whitespace-loader.svg)](https://ci.appveyor.com/project/markis/strip-whitespace-loader)
 [![Known Vulnerabilities](https://snyk.io/test/github/markis/strip-whitespace-loader/badge.svg)](https://snyk.io/test/github/markis/strip-whitespace-loader)
 [![David](https://img.shields.io/david/markis/strip-whitespace-loader.svg)](https://david-dm.org/markis/strip-whitespace-loader)
-[![Greenkeeper badge](https://badges.greenkeeper.io/markis/strip-whitespace-loader.svg)](https://greenkeeper.io/)
+
 [![Coveralls](https://img.shields.io/coveralls/markis/strip-whitespace-loader.svg)](https://coveralls.io/github/markis/strip-whitespace-loader)
 [![Codacy grade](https://img.shields.io/codacy/grade/9c91f25bb9914a268cdf3644211fbae2.svg)](https://www.codacy.com/app/markis/strip-whitespace-loader)
 
